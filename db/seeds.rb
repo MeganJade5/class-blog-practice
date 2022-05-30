@@ -3,8 +3,9 @@
 #
 # Examples:
 #
-articles = Article.create([
-                            { title: 'Star Wars', body: "body here", important: 6 },
-                            { title: 'Star Trek', body: "body 2 here", important: 2 }
-                          ])
+10.times do |i|
+    Article.create([
+                     { title: "this title #{i}", body: "body here", important: rand(1..10) }
+                   ])
+end
 #   Character.create(name: 'Luke', movie: movies.first)
