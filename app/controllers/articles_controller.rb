@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+    before_action: authenticate_user!, only: [:new, :create, :update, :edit, :destory]
+
     def index
         @time = Time.now
         @articles = Article.all
