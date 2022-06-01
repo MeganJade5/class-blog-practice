@@ -4,8 +4,13 @@
 # Examples:
 #
 10.times do |i|
-    Article.create([
-                     { title: "this title #{i}", body: "body here", important: rand(1..10) }
-                   ])
-end
+
+  Article.create([
+                  {
+                    title: "this title #{i}",
+                    body: "body here",
+                    important: rand(1..10)
+                  }
+                ])
+  end
 #   Character.create(name: 'Luke', movie: movies.first)
