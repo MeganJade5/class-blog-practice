@@ -6,8 +6,10 @@
 <p> Created <%= time_ago_in_words(@article.created_at) %> ago</p>
 <p> Updated <%= time_ago_in_words(@article.updated_at) %> ago</p>
 
-<p><%= link_to "Edit this article", edit_article_path%></p>
-<p><%= button_to "Delete this article", article_path, method: :delete %></p>
+<% if @article_user == @article.user%>
+  <p><%= link_to "Edit this article", edit_article_path%></p>
+  <p><%= button_to "Delete this article", article_path, method: :delete %></p>
+<%end%>
 
 <h2> Comments </h2>
 <% @article.comments.each do |comment| %>
