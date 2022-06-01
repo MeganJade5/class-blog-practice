@@ -3,14 +3,13 @@
 #
 # Examples:
 #
-10.times do |i|
-
+10.times do |_i|
   Article.create([
-                  {
-                    title: "this title #{i}",
-                    body: "body here",
-                    important: rand(1..10)
-                  }
-                ])
-  end
+                   {
+                     title: Faker::TvShows::Friends.quote,
+                     body: Faker::Quotes::Shakespeare.romeo_and_juliet_quote,
+                     important: rand(1..10)
+                   }
+                 ])
+end
 #   Character.create(name: 'Luke', movie: movies.first)
