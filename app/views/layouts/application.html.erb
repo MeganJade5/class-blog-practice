@@ -20,8 +20,9 @@
     <p class="alert"><%= alert %></p>
     
     <%= yield %>
-    <%# <% Rails.env=development%>
-      <%# <% console %> %> %>
+    <% if Rails.env.development?%>
+        <% console %>
+    <% end %>
 
   </body>
 </html>
